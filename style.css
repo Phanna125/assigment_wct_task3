@@ -1,0 +1,98 @@
+:root {
+    --brand-teal: #0d3b38;
+    --brand-coral: #ef765a;
+    --brand-light: #f8f9fa;
+    --text-dark: #2d3748;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-dark);
+}
+
+/* Custom Buttons */
+.btn-brand {
+    background-color: var(--brand-coral);
+    color: white;
+    border-radius: 50px;
+    padding: 10px 24px;
+    font-weight: 500;
+    border: 2px solid var(--brand-coral);
+    transition: all 0.3s ease;
+}
+
+.btn-brand:hover {
+    background-color: transparent;
+    color: var(--brand-coral);
+}
+
+.btn-outline-brand {
+    background-color: transparent;
+    color: var(--text-dark);
+    border-radius: 50px;
+    padding: 10px 24px;
+    font-weight: 500;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-brand:hover {
+    border-color: var(--text-dark);
+}
+
+/* Utility Backgrounds */
+.bg-teal { background-color: var(--brand-teal); }
+.text-coral { color: var(--brand-coral); }
+.bg-gray-soft { background-color: #f4f7f6; }
+
+/* Feature Cards */
+.feature-card {
+    background: var(--brand-light);
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Step Circles */
+.step-circle {
+    width: 60px;
+    height: 60px;
+    background: white;
+    color: var(--brand-teal);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.step-circle.active {
+    background: var(--brand-coral);
+    color: white;
+}
+
+/* Pricing Cards */
+.pricing-card {
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.pricing-card.popular {
+    border: 2px solid var(--brand-coral);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(239, 118, 90, 0.15);
+}
+
+@media (max-width: 991px) {
+    .pricing-card.popular { 
+        transform: scale(1); 
+        margin-top: 1rem; 
+        margin-bottom: 1rem; 
+    }
+}
